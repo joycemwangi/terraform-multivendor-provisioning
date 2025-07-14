@@ -1,37 +1,21 @@
-# terraform-multivendor-provisioning
-Automated Terraform-based provisioning of multi-vendor network devices (Cisco, Palo Alto, Fortinet, Juniper, F5, Azure, Checkpoint, Infoblox, Zscaler, SD Access) and secure user access configuration across hybrid cloud and on-prem environments.
+# Terraform Provisioning Project
 
-Project Structure Overview
+## Overview
+This project contains Terraform configurations and supporting scripts to provision infrastructure.
 
-terraform-multivendor-provisioning/
-├── main.tf
-├── variables.tf
-├── outputs.tf
-├── providers.tf
-├── modules/
-│   ├── aci/
-│   │   └── main.tf
-│   ├── paloalto/
-│   │   └── main.tf
-│   ├── sdaccess/
-│   │   └── main.tf
-│   ├── ios-xe/
-│   │   └── main.tf
-│   ├── nxos/
-│   │   └── main.tf
-│   ├── fortinet/
-│   │   └── main.tf
-│   ├── checkpoint/
-│   │   └── main.tf
-│   ├── juniper/
-│   │   └── main.tf
-│   ├── azure/
-│   │   └── main.tf
-│   ├── zscaler/
-│   │   └── main.tf
-│   ├── f5/
-│   │   └── main.tf
-│   ├── infoblox/
-│   │   └── main.tf
-│   └── user-access/
-│       └── main.tf
+## Project Structure
+- `terraform_provisioning.tf` — Main Terraform configuration file
+- `terraform.tfvars` — Variables values file for environment-specific settings
+- `module/` — Reusable Terraform modules
+- `script/` — Automation and helper scripts
+
+## Prerequisites
+- Terraform installed (version 1.0 or higher recommended)
+- AWS CLI / Azure CLI / other cloud CLIs installed if applicable
+- Appropriate permissions to provision infrastructure
+
+## Usage
+
+1. Initialize Terraform:
+   ```bash
+   terraform init
