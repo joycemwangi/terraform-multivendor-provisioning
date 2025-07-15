@@ -30,3 +30,10 @@ jobs:
 
       - name: Terraform Validate
         run: terraform validate
+        
+      - name: List files
+        run: ls -R
+
+
+
+
